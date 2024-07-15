@@ -1,0 +1,618 @@
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "cormorantSB";
+  src: url("/Fonts/CormorantSC-SemiBold.ttf");
+}
+@font-face {
+  font-family: "cormorantB";
+  src: url("/Fonts/CormorantSC-Bold.ttf");
+}
+@font-face {
+  font-family: "cormorantM";
+  src: url("/Fonts/CormorantSC-Medium.ttf");
+}
+@font-face {
+  font-family: "cormorantR";
+  src: url("/Fonts/CormorantSC-Regular.ttf");
+}
+@font-face {
+  font-family: "poppins";
+  src: url("/Fonts/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: "poppinsM";
+  src: url("/Fonts/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: "poppinsL";
+  src: url("/Fonts/Poppins-Light.ttf");
+}
+
+/* Navbar */
+.navbar {
+  margin-bottom: 20px;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transition: left 0.5s ease-in-out;
+}
+
+.slider img.active {
+  left: 0;
+}
+
+.slider-dots {
+  text-align: center;
+}
+
+.slider-dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-dots .dot.active {
+  background-color: #333;
+}
+
+.whychooseus {
+  padding-top: 10vw;
+}
+.whychooseus > h2 {
+  text-align: left;
+  font: cormorantM;
+  letter-spacing: 0px;
+  color: #ff3147;
+  text-transform: uppercase;
+  opacity: 1;
+  font-size: 1.8vw;
+  margin-bottom: 2vw;
+}
+
+.whychooseus > h1 {
+  font: cormorantB;
+  letter-spacing: 0px;
+  color: black;
+  text-transform: uppercase;
+  opacity: 1;
+  font-size: 3vw;
+  font-weight: 700;
+  margin-bottom: 4vw;
+}
+.features {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: 30vw;
+  position: relative;
+}
+.features > .card {
+  height: 20vw;
+  max-width: 22%;
+  background-color: white;
+  transition: box-shadow 0.3s ease; /* Add transition for smooth shadow effect */
+}
+.card > h3 {
+  font-size: 1.6vw;
+  font-family: poppinsM;
+}
+.card > p {
+  font-size: 1.2vw;
+}
+
+.card > i {
+  font-size: 5vw;
+  margin-bottom: 2vw;
+}
+.whychooseus .features > .card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adjust shadow as needed */
+}
+.ourprojects > h2 {
+  text-align: left;
+  font: cormorantM;
+  letter-spacing: 0px;
+  color: #ff3147;
+  text-transform: uppercase;
+  opacity: 1;
+  font-size: 1.8vw;
+  margin-bottom: 2vw;
+}
+
+.ourprojects > h1 {
+  font: cormorantB;
+  letter-spacing: 0px;
+  color: black;
+  text-transform: uppercase;
+  opacity: 1;
+  font-size: 3vw;
+  font-weight: 700;
+  margin-bottom: 4vw;
+}
+
+.main {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  justify-content: flex-start; /* Align items to the left */
+  padding: 2vw 5vw;
+}
+
+.img-container {
+  flex: 1;
+  margin-right: 20px; /* Space between image and project names */
+}
+
+.img-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.projects-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+  background-color: #f1eaea;
+}
+
+.projects-name div {
+  margin: 10px 0;
+  cursor: pointer;
+  padding: 1vw 3vw;
+  border-radius: 1vw;
+}
+.projects-name h3 {
+  font-size: 1.6vw;
+  font-family: poppinsM;
+  color: black;
+}
+.projects-name div:hover {
+  background-color: #ff3147;
+  color: white; /* Change color on hover */
+}
+
+.companystats {
+  padding-top: 10vw;
+}
+.companystats > h2 {
+  text-align: left;
+  font: cormorantM;
+  letter-spacing: 0px;
+  color: #ff3147;
+  text-transform: uppercase;
+  opacity: 1;
+  font-size: 1.8vw;
+  margin-bottom: 2vw;
+}
+
+.companystats > h1 {
+  font: cormorantB;
+  letter-spacing: 0px;
+  color: black;
+  text-transform: uppercase;
+  opacity: 1;
+  font-size: 3vw;
+  font-weight: 700;
+  margin-bottom: 4vw;
+}
+.companystats .features {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: 30vw;
+  position: relative;
+  padding: 1vw 5vw;
+}
+.companystats .features > .card {
+  height: 15vw;
+  max-width: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  transition: box-shadow 0.3s ease; /* Add transition for smooth shadow effect */
+}
+.companystats .card > h3 {
+  font-size: 4vw;
+  font-family: poppinsM;
+}
+.companystats .card > p {
+  font-size: 1.8vw;
+}
+
+.companystats .card > img {
+  height: 4vw;
+  width: 4vw;
+
+  margin-bottom: 2vw;
+}
+.companystats .features > .card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adjust shadow as needed */
+}
+
+.feedback {
+  padding-top: 10vw;
+  margin-bottom: 12vw;
+}
+.feedback > .main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.feedback > h2 {
+  text-align: left;
+  font: cormorantM;
+  letter-spacing: 0px;
+  color: #ff3147;
+  text-transform: uppercase;
+  opacity: 1;
+  font-size: 1.8vw;
+  margin-bottom: 2vw;
+}
+
+.feedback > h1 {
+  font: cormorantB;
+  letter-spacing: 0px;
+  color: black;
+  text-transform: uppercase;
+  opacity: 1;
+  font-size: 3vw;
+  font-weight: 700;
+  margin-bottom: 4vw;
+}
+.feedback .main h4 {
+  font-size: 1.4vw;
+  margin: 1vw 12vw;
+  letter-spacing: 0.15vw;
+}
+.feedback .client-name {
+  color: #ff3147;
+  font-family: poppins;
+  font-size: 1.5vw;
+}
+.feedback .designation {
+  color: #333;
+  font-size: 1.3vw;
+  font-family: poppinsL;
+}
+.clientdetails {
+  display: flex;
+  align-items: center;
+  margin: 1vw 12vw;
+  gap: 2vw;
+  width: 100%;
+}
+
+footer {
+  background-color: #ff3147;
+  height: 18vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer img {
+  width: 6vw;
+  height: 6vw;
+  object-fit: cover;
+}
+
+.contactus_section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  margin-bottom: 20vw;
+}
+
+.contactus_section > .left {
+  width: 50vw;
+  height: 100vh;
+  position: relative;
+  padding-left: 3vw;
+  padding-top: 14vw;
+}
+.contactus_section > .left > h2 {
+  text-align: left;
+  font: cormorantM;
+  letter-spacing: 0px;
+  color: #ff3147;
+  text-transform: uppercase;
+  opacity: 1;
+  font-size: 2.2vw;
+  margin-bottom: 2vw;
+}
+
+.contactus_section > .left > h1 {
+  text-align: left;
+  font: cormorantB;
+  letter-spacing: 0px;
+  color: black;
+  text-transform: uppercase;
+  opacity: 1;
+  font-size: 4.4vw;
+  font-weight: 700;
+}
+
+.contactus_section > .left > .description > p {
+  text-align: left;
+  font: cormorantR;
+  letter-spacing: 0px;
+  color: black;
+  opacity: 1;
+  font-size: 1.2vw;
+  margin-top: 3vw;
+}
+
+.description > button {
+  background-color: #ff3147;
+  color: white;
+  padding: 1vw 2vw;
+  border: transparent;
+  font-family: poppins;
+  font-size: 1vw;
+  letter-spacing: 0.2vw;
+  margin-top: 3vw;
+}
+.description > button > a {
+  color: white;
+  text-transform: uppercase;
+  font-family: poppins;
+  font-size: 1vw;
+  letter-spacing: 0.2vw;
+}
+.contactus_section > .right {
+  padding-left: 4vw;
+  padding-top: 2vw;
+}
+
+/* Slider container */
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 95vw;
+  margin: 0 auto;
+}
+
+/* Slider track */
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Card */
+.card {
+  flex: 0 0 32%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  height: 40vw;
+  width: 22vw;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Card overlay */
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.card:hover .card-overlay {
+  background-color: #ff3147;
+  opacity: 1;
+}
+
+/* Overlay text */
+.overlay-text {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Slider dots */
+.slider-dots {
+  text-align: left;
+  padding-left: 2vw;
+  padding-top: 1.5vw;
+}
+
+.slider-dots .dot {
+  display: inline-block;
+  width: 1.9vw;
+  height: 1.9vw;
+  margin: 5px;
+  border: 1.8px solid #ccc; /* Initial border color */
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.slider-dots .dot .inner-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.6vw; /* Size of the inner dot */
+  height: 0.6vw;
+  background-color: #ccc; /* Initial background color */
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.slider-dots .dot.active {
+  border-color: #ff3147; /* Active border color */
+  background-color: transparent; /* Ensure the background of the outer circle is transparent */
+}
+
+.slider-dots .dot.active .inner-dot {
+  background-color: #ff3147; /* Active inner dot color */
+}
+
+/* Highlight on hover for cards */
+.card:hover {
+  transition: transform 1s ease-in-out;
+}
+
+.custom-icon {
+  font-size: 4vw;
+}
+
+.readmore > button {
+  color: #ff3147;
+  border: transparent;
+  border-radius: 4px;
+  padding: 0.6vw 2vw;
+  font-size: 1.1vw;
+  text-transform: uppercase;
+  font-family: Poppins;
+  letter-spacing: 0.1vw;
+}
+
+.innerdot {
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  cursor: pointer;
+}
+
+.innerdot.active {
+  background-color: #ff3147;
+}
+.titleblock {
+  padding-left: 3vw;
+}
+.card-slider-title {
+  text-align: left;
+  font: cormorantM;
+  letter-spacing: 0px;
+  color: #ff3147;
+  text-transform: uppercase;
+  opacity: 1;
+  font-size: 1.8vw;
+  margin-bottom: 2vw;
+}
+.contactus {
+  background-color: #f9f9f9;
+  padding: 2vw;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 45vw;
+  margin: 0 auto;
+}
+
+.contactus h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.contactus .main {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 100%; /* Adjust width as needed */
+}
+
+.contactus form {
+  width: 100%;
+  max-width: 30vw; /* Adjust max-width as needed */
+}
+
+.contactus input[type="email"],
+.contactus input[type="text"] {
+  width: 100%;
+  margin: 0.5rem 0;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  border-radius: 0;
+  transition: border-bottom-color 0.3s ease;
+}
+
+.contactus input[type="email"]:focus,
+.contactus input[type="text"]:focus {
+  outline: none;
+  border-bottom-color: #ff3147;
+}
+
+.contactus .name-fields {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.contactus .name-fields input {
+  flex: 1;
+}
+
+.contactus .checkbox-container {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.contactus .checkbox-container input {
+  margin-right: 0.5rem;
+}
+
+.contactus .checkbox-container label {
+  font-size: 1vw;
+}
+
+.contactus button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #ff3147;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contactus button:hover {
+  background-color: #e02d41;
+}
